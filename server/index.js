@@ -14,6 +14,7 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 //const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.8uiuw.mongodb.net/wikiHopper?retryWrites=true&w=majority`;
+
 const url = CONNECTION_URL;
 console.log(url);
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
