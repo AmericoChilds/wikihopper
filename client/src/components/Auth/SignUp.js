@@ -3,10 +3,10 @@ import React from 'react'
 import { GoogleLogin } from 'react-google-login'
 import { Row, Container, Col, InputGroup, FormControl, Button } from 'react-bootstrap'
 
-function SignIn({handleSignIn, handleSwitch}) {
+function SignUp({handleSignUp, handleSwitch}) {
 
     const responseGoogle = (response) => {
-        handleSignIn(response);
+        handleSignUp(response);
     }
 
     const handleS = () => {
@@ -15,7 +15,7 @@ function SignIn({handleSignIn, handleSwitch}) {
 
     return (
             <Col md={10} className="text-center">
-                <h1 className="mt-5">Sign-In</h1>
+                <h1 className="mt-5">Sign-Up</h1>
                 
                 <div className="d-grid">
                     <GoogleLogin
@@ -48,9 +48,8 @@ function SignIn({handleSignIn, handleSwitch}) {
                     <Button onClick={handleS} className="mb-3 mt-2" >Create an Account</Button>
                 </div>
                 <br/>
-
             </Col>
     )
 }
 
-export default SignIn
+export default SignUp
